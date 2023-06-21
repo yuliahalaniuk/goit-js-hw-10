@@ -1,5 +1,3 @@
-import SlimSelect from 'slim-select';
-
 const API_KEY =
   'live_O3927UMSCDVSRuluvYEl6wyouVSOgxj6c4DrHJplcQRK4TDCAy8pUdXT2avFrmMs';
 
@@ -45,14 +43,4 @@ export function fetchCatImg(breedId) {
 }
 export function getStoredBreeds() {
   return storedBreeds;
-}
-
-export function initializeSelect() {
-  selectEl = document.querySelector('.breed-select');
-  new SlimSelect({
-    select: selectEl,
-    settings: {
-      placeholderText: 'Choose a cat breed',
-    },
-  });
 }

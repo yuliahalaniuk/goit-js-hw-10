@@ -1,7 +1,8 @@
+import SlimSelect from 'slim-select';
+
 import {
   fetchBreeds,
   getStoredBreeds,
-  initializeSelect,
   fetchOneBreed,
   fetchCatImg,
 } from './api.js';
@@ -13,6 +14,15 @@ const refs = {
   loaderEl: document.querySelector('.load-js'),
 };
 
+function initializeSelect() {
+  selectEl = document.querySelector('.breed-select');
+  new SlimSelect({
+    select: selectEl,
+    settings: {
+      placeholderText: 'Choose a cat breed',
+    },
+  });
+}
 function showCatImageAndInformation({ name, description, temperament, image }) {
   document.getElementById('breed_name').innerHTML = name;
   document.getElementById('breed-descr').textContent = description;
