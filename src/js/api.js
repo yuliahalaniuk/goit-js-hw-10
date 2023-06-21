@@ -41,6 +41,7 @@ export function fetchCatImg(breedId) {
       return img;
     });
 }
+
 export function getStoredBreeds() {
   return storedBreeds;
 }

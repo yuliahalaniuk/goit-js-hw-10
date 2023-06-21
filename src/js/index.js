@@ -23,15 +23,6 @@ function initializeSelect() {
     },
   });
 }
-function showCatImageAndInformation({ name, description, temperament, image }) {
-  document.getElementById('breed_name').innerHTML = name;
-  document.getElementById('breed-descr').textContent = description;
-  document.getElementById('breed_json').textContent = temperament;
-}
-
-function showCatImg(image) {
-  document.getElementById('cat_image').src = image.url;
-}
 
 function selectBreed(data) {
   data.map(breed => {
@@ -44,6 +35,16 @@ function getBreedIdByName(breedName) {
   const storedBreeds = getStoredBreeds();
   const breedId = storedBreeds.find(breed => breed.name === breedName).id;
   return breedId;
+}
+
+function showCatImageAndInformation({ name, description, temperament }) {
+  document.getElementById('breed_name').innerHTML = name;
+  document.getElementById('breed-descr').textContent = description;
+  document.getElementById('breed_json').textContent = temperament;
+}
+
+function showCatImg(image) {
+  document.getElementById('cat_image').src = image.url;
 }
 
 function onError(error) {
