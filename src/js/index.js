@@ -15,9 +15,8 @@ const refs = {
 };
 
 function initializeSelect() {
-  selectEl = document.querySelector('.breed-select');
   new SlimSelect({
-    select: selectEl,
+    select: refs.selectEl,
     settings: {
       placeholderText: 'Choose a cat breed',
     },
