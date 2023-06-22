@@ -37,9 +37,18 @@ function getBreedIdByName(breedName) {
 }
 
 function showCatImageAndInformation({ name, description, temperament }) {
-  document.getElementById('breed_name').innerHTML = name;
-  document.getElementById('breed-descr').textContent = description;
-  document.getElementById('breed_json').textContent = temperament;
+  const catHtml = `<div class="cat_image-wrap">
+    <img id="cat_image" class="cat-pic" width="300"></img>
+    </div>
+
+    <div class="cat_information ">
+    <h4 id="breed_name">${name}</h4>
+    <p id="breed-descr">${description}</p> 
+    <h4 class="temper-title">Temperament:</h4>
+    <p id="breed_json">${temperament}</p>
+    </div>
+    `;
+  refs.catInfoContainer.innerHTML = catHtml;
 }
 
 function showCatImg(image) {
